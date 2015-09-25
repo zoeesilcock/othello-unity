@@ -11,9 +11,9 @@ public class RenderRotationSystem : IReactiveSystem {
   public void Execute (List<Entity> entities){
     foreach (var entity in entities) {
       if (entity.disc.isBlack) {
-        entity.view.gameObject.transform.localRotation = Quaternion.Euler(270, 0, 0);
-      } else {
         entity.view.gameObject.transform.localRotation = Quaternion.Euler(90, 0, 0);
+      } else {
+        entity.view.gameObject.transform.localRotation = Quaternion.Euler(270, 0, 0);
       }
     }
   }

@@ -12,7 +12,7 @@ public class RenderPositionSystem : IReactiveSystem {
     foreach (var entity in entities) {
       var gridPosition = entity.position;
 
-      entity.view.gameObject.transform.position = new Vector3(-3.5f + gridPosition.x, 0.1f, -3.5f + gridPosition.y);
+      entity.view.gameObject.transform.position = new Vector3(3.5f - gridPosition.x, 0.1f, -3.5f + gridPosition.y);
     }
   }
 }

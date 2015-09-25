@@ -6,11 +6,9 @@ public class GameController : MonoBehaviour {
   public GameObject _discPrefab;
 
   private Systems systems;
-  private Pool pool;
+  private Pool pool = Pools.pool;
 
   void Start() {
-    pool = new Pool(ComponentIds.TotalComponents);
-
     systems = new Systems()
       .Add(pool.CreateSystem<AddViewSystem>())
       .Add(pool.CreateSystem<RenderPositionSystem>())
